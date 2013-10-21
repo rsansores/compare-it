@@ -36,4 +36,5 @@ local.properties
 # Python
 
 *.pyc
-
+*~
+CompareIT-backend/reports

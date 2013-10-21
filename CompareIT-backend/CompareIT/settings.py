@@ -125,7 +125,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'south',
-    'django_jenkins', 
+    'django_jenkins',
+    'rest_framework', 
 )
 
 JENKINS_TASKS = (
@@ -135,6 +136,11 @@ JENKINS_TASKS = (
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'PAGINATE_BY': 10
+}
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
