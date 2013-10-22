@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <!-- Top  -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:id="@+id/layout_add_top">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/imageView"
+            android:background="#000000"
+            android:layout_gravity="left|top" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_marginLeft="5dp"
+            android:hint="Nombre del Producto"/>
+    </LinearLayout>
+
+    <!-- Categoria -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@id/layout_add_top"
+        android:id="@+id/layout_category_row">
+
+
+        <EditText
+            android:id="@+id/category"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="Categoria"
+            android:enabled="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/category"
+            android:id="@+id/pick_category"
+            android:text="Seleccionar"
+            />
+
+    </LinearLayout>
+
+    <!-- Ubicacion -->
+    <LinearLayout
+        android:id="@+id/layout_add_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@id/layout_category_row">
+
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="Ubicacion"
+            android:enabled="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/location"
+            android:id="@+id/pick_location"
+            android:text="Seleccionar"
+            />
+
+    </LinearLayout>
+
+    <!-- Marca -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@id/layout_add_location"
+        android:id="@+id/layout_brand_row">
+
+
+        <EditText
+            android:id="@+id/brand"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="Marca"
+            android:enabled="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/brand"
+            android:id="@+id/pick_brand"
+            android:text="Seleccionar"
+            />
+
+    </LinearLayout>
+
+
+    <!-- Marca -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="bottom"
+        android:id="@+id/layout_ticket_row"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/brand"
+            android:id="@+id/pick_ticket"
+            android:text="Ticket"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/brand"
+            android:id="@+id/pick_barcode"
+            android:text="Codigo de Barras"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
