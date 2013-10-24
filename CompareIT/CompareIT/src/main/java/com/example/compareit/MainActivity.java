@@ -1,8 +1,12 @@
 package com.example.compareit;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.app.Activity;
+
+
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
@@ -115,9 +119,22 @@ public class MainActivity extends Activity {
 
     private void selectItem(int position) {
         // Create a new fragment and specify the planet to show based on position
-        /*Fragment fragment = new PlanetFragment();
+        Fragment fragment = null;
+
+        switch(position){
+            case 0 :
+            break;
+            case 1:
+                fragment = new addProduct();
+            break;
+
+        }
+        if (fragment == null){
+            return;
+        }
+
         Bundle args = new Bundle();
-        args.putInt(PlanetFragment.ARG_PLANET_NUMBER, position);
+        // si necesitaramos pasar argumentos.
         fragment.setArguments(args);
 
         // Insert the fragment by replacing any existing fragment
@@ -128,8 +145,7 @@ public class MainActivity extends Activity {
 
         // Highlight the selected item, update the title, and close the drawer
         mDrawerList.setItemChecked(position, true);
-        setTitle(mPlanetTitles[position]);
-        mDrawerLayout.closeDrawer(mDrawerList);*/
+        mDrawerLayout.closeDrawer(mDrawerList);
     }
 
     @Override
