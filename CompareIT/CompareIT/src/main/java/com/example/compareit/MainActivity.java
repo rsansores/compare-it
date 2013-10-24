@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 
 
 
-        mMenuItems = new String[]{"Tiendas", "Productos", "Reviews"};
+        mMenuItems = new String[]{"Tiendas", "Agregar Producto", "Reviews"};
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
 
@@ -103,7 +103,9 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.options_menu, menu);
+
+
         return true;
     }
 
