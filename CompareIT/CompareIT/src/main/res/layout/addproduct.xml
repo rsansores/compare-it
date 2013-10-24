@@ -128,13 +128,13 @@
             android:text="Ticket"
             />
 
-        <Button
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@id/brand"
             android:id="@+id/pick_barcode"
-            android:text="Codigo de Barras"
-            />
+            android:src="@drawable/ic_barcode"
+            android:scaleType="centerInside" />
 
     </LinearLayout>
 
