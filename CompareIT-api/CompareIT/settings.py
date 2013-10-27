@@ -12,11 +12,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'CompareIT',                      # Or path to database file if using sqlite3.
+        'NAME': 'test_compareit_obedmr',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'CompareIT_user',
         'PASSWORD': 'CompareIT',
-        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'HOST': 'obedmr.com',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
     }
 }
@@ -126,7 +126,8 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'south',
     'django_jenkins',
-    'rest_framework', 
+    'rest_framework',
+    'rest_framework.authtoken',  
 )
 
 JENKINS_TASKS = (
@@ -138,6 +139,9 @@ JENKINS_TASKS = (
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
 REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+       'rest_framework.authentication.TokenAuthentication',
+     ),
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
     'PAGINATE_BY': 10
 }
