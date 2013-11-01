@@ -9,7 +9,7 @@
         android:id="@+id/search_string"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:margin="3dp"
+        android:layout_margin="3dp"
         android:hint="@string/search_title"
         />
 
@@ -18,7 +18,7 @@
         android:layout_height="20dp"
         android:layout_width="fill_parent"
         android:layout_below="@id/search_string"
-        android:margin="3dp"
+        android:layout_margin="3dp"
         android:text="@string/results"
         android:textAlignment="center"
         android:typeface="normal" />
