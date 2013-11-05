@@ -127,7 +127,8 @@ INSTALLED_APPS = (
     'south',
     'django_jenkins',
     'rest_framework',
-    'rest_framework.authtoken',  
+    'rest_framework.authtoken',
+    'rest_api',  
 )
 
 JENKINS_TASKS = (
@@ -139,11 +140,11 @@ JENKINS_TASKS = (
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-       'rest_framework.authentication.TokenAuthentication',
-     ),
-    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
-    'PAGINATE_BY': 10
+#    'DEFAULT_AUTHENTICATION_CLASSES': (
+#       'rest_framework.authentication.TokenAuthentication',
+#     ),
+#    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+#    'PAGINATE_BY': 10
 }
 
 # A sample logging configuration. The only tangible logging
