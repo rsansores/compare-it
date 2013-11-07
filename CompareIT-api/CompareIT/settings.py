@@ -12,11 +12,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'test_compareit_obedmr',                      # Or path to database file if using sqlite3.
+        'NAME': 'CompareIT',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': 'CompareIT_user',
-        'PASSWORD': 'CompareIT',
-        'HOST': 'obedmr.com',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'USER': 'compareit',
+        'PASSWORD': 'p4SSw0rd',
+        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
     }
 }
