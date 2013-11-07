@@ -10,5 +10,6 @@ djangorestframework==2.3.8
 docutils==0.11
 logilab-common==0.60.0
 pep8==1.4.6
+pyflakes==0.7.3
 pylint==1.0.0
 wsgiref==0.1.2
