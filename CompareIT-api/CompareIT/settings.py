@@ -15,7 +15,7 @@ DATABASES = {
         'NAME': 'CompareIT',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'compareit',
-        'PASSWORD': 'p4SSw0rd',
+        'PASSWORD': 'compareit',
         'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
     }
@@ -134,15 +134,14 @@ INSTALLED_APPS = (
 JENKINS_TASKS = (
     'django_jenkins.tasks.run_pylint',
     'django_jenkins.tasks.with_coverage',
-    'django_jenkins.tasks.with_coverage',
     #'django_jenkins.tasks.django_tests',   # select one django or
     #'django_jenkins.tasks.dir_tests'      # directory tests discovery
     'django_jenkins.tasks.run_pep8',
     'django_jenkins.tasks.run_pyflakes',
-    'django_jenkins.tasks.run_jslint',
+#    'django_jenkins.tasks.run_jslint',
     'django_jenkins.tasks.run_csslint',    
     'django_jenkins.tasks.run_sloccount',    
-    'django_jenkins.tasks.lettuce_tests',
+#    'django_jenkins.tasks.lettuce_tests',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
