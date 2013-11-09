@@ -15,7 +15,7 @@ class Enterprise(models.Model):
 	latitude = models.CharField(max_length=100)
 	longitude = models.CharField(max_length=100)
 
-class Objects(models.Model):
+class Product(models.Model):
 	name = models.CharField(max_length=45)
 	price = models.DecimalField(max_digits=9, decimal_places=2)
 	isPromotion = models.IntegerField()
@@ -27,5 +27,4 @@ class Objects(models.Model):
 	ticketImage = models.CharField(max_length=100)
 	objectImage = models.CharField(max_length=100)
 	enterpriseId = models.ForeignKey(Enterprise)
-	userId = models.ForeignKey(User)
 	reliabilityId = models.ForeignKey(Reliability)
