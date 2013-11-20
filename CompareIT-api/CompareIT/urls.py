@@ -14,7 +14,6 @@ router.register(r'groups', views.GroupViewSet)
 router.register(r'products', views.ProductViewSet)
 router.register(r'Enterprise', views.EnterpriseViewSet)
 router.register(r'Reliability', views.ReliabilityViewSet)
-#router.register(r'product_filer', views.ProductFilterViewSet)
 
 urlpatterns = patterns('',
     # Examples:
@@ -29,4 +28,7 @@ urlpatterns = patterns('',
     url(r'^rest-api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+    # Filter Rules
+    url('^filter_product/$', views.ProductFilterViewSet.as_view()),
+    url('^filter_enterprise/$', views.EnterpriseFilterViewSet.as_view()),
 )
