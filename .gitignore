@@ -37,4 +37,5 @@ local.properties
 
 *.pyc
 *~
-CompareIT-backend/reports
+CompareIT-api/reports
+CompareIT-api/rest_api/migrations

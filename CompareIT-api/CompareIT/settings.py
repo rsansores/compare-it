@@ -12,11 +12,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'test_compareit_obedmr',                      # Or path to database file if using sqlite3.
+        'NAME': 'CompareIT',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': 'CompareIT_user',
-        'PASSWORD': 'CompareIT',
-        'HOST': 'obedmr.com',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'USER': 'compareit',
+        'PASSWORD': 'compareit',
+        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
     }
 }
@@ -50,12 +50,12 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = '/tmp/compareit/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = ''
+MEDIA_URL = 'http://compareit.obedmr.com/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -127,23 +127,31 @@ INSTALLED_APPS = (
     'south',
     'django_jenkins',
     'rest_framework',
-    'rest_framework.authtoken',  
+    'rest_framework.authtoken',
+    'rest_api',  
 )
 
 JENKINS_TASKS = (
     'django_jenkins.tasks.run_pylint',
     'django_jenkins.tasks.with_coverage',
-    'django_jenkins.tasks.django_tests',
+    #'django_jenkins.tasks.django_tests',   # select one django or
+    #'django_jenkins.tasks.dir_tests'      # directory tests discovery
+    'django_jenkins.tasks.run_pep8',
+    'django_jenkins.tasks.run_pyflakes',
+#    'django_jenkins.tasks.run_jslint',
+    'django_jenkins.tasks.run_csslint',    
+    'django_jenkins.tasks.run_sloccount',    
+#    'django_jenkins.tasks.lettuce_tests',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-       'rest_framework.authentication.TokenAuthentication',
-     ),
-    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
-    'PAGINATE_BY': 10
+#    'DEFAULT_AUTHENTICATION_CLASSES': (
+#       'rest_framework.authentication.TokenAuthentication',
+#     ),
+#    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+#    'PAGINATE_BY': 10
 }
 
 # A sample logging configuration. The only tangible logging
