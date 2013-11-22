@@ -18,6 +18,8 @@ import android.widget.ListView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Vector;
 
@@ -72,9 +74,15 @@ public class Search extends Fragment implements AsyncStuff{
         resultsView.setAdapter(adapter);
 
         button.setOnClickListener(new View.OnClickListener() {
+            String query="";
             public void onClick(View v) {
+                try {
+                     query = URLEncoder.encode(search_str.getText().toString(), "utf-8");
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
                 httpTask lookup = new httpTask(ctx, httpTask.GET,
-                        "http://compareit.obedmr.com/filter_product/?format=json&search=" + search_str.getText());
+                        "http://compareit.obedmr.com/filter_product/?format=json&search=" + query);
                 lookup.setListener(Search.this);
                 lookup.execute(null);
 
