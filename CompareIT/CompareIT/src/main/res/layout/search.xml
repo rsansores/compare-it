@@ -5,28 +5,37 @@
     android:layout_height="match_parent">
 
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:id="@+id/layout_search_row">
+
+
     <EditText
         android:id="@+id/search_string"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="3dp"
+        android:layout_margin="0dp"
+        android:layout_gravity="left"
+        android:layout_weight="2"
         android:hint="@string/search_title"
         />
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_toRightOf="@id/search_string"
+        android:contentDescription=""
+        android:src="@drawable/ic_action_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/txt_search"
-        android:layout_height="20dp"
-        android:layout_width="fill_parent"
-        android:layout_below="@id/search_string"
-        android:layout_margin="3dp"
-        android:text="@string/results"
-        android:textAlignment="center"
-        android:typeface="normal" />
+    </LinearLayout>
 
     <ListView
+        android:id="@+id/search_results"
         android:layout_height="fill_parent"
         android:layout_width="fill_parent"
-        android:layout_below="@+id/txt_search"
+        android:layout_below="@+id/layout_search_row"
         >
 
     </ListView>

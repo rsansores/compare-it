@@ -63,7 +63,7 @@
 
     <!-- Product Quantity -->
 
-    <TextView
+   <!-- <TextView
         android:id="@+id/Quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,6 +74,6 @@
         android:textColor="#040404"
         android:textSize="10dip"
         android:textStyle="bold"
-        android:typeface="sans" />
+        android:typeface="sans" /> -->
 
 </RelativeLayout>
