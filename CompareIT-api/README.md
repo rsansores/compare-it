@@ -1,4 +1,7 @@
-POSTING PRODUCTS
+POSTING DATA Examples
+==================
+
+PRODUCTS
 ------------------
 
 ```
