@@ -43,7 +43,7 @@ class ProductFilterViewSet(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     filter_backends = (filters.SearchFilter,)
-    search_fields = ('name', 'price')
+    search_fields = ('name', 'price', 'enterprise__name')
 
 class EnterpriseFilterViewSet(generics.ListAPIView):
     queryset = Enterprise.objects.all()
